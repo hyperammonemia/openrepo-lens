@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.venv/
+.qa/
+.tmp/
+.test-tmp/
+node_modules/
+*.tmp
+*.zip
+tests/scratch_*/
+tests/buildcheck_*/
+tests/reanalysis_*/
+.DS_Store
+Thumbs.db

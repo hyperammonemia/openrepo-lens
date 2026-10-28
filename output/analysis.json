@@ -1,0 +1,1557 @@
+{
+  "schema_version": 1,
+  "collected_at": "2026-10-28T14:26:08Z",
+  "collection_finished_at": "2026-10-28T14:27:35Z",
+  "source": "GitHub REST API",
+  "sampling": {
+    "description": "每个仓库按创建时间倒序读取最多 200 条 Issue 与 PR 混合记录，再按创建时间筛选 30 天、90 天或全部已采集样本。",
+    "max_records_per_repo": 200,
+    "selection": "人工选取五个 Python Web 框架作为便利样本，不能代表全部开源项目。",
+    "state_reference": "各响应读取时的当前状态；时间筛选只针对创建时间，不重建历史状态。"
+  },
+  "repositories": [
+    {
+      "name": "pallets/flask",
+      "url": "https://github.com/pallets/flask",
+      "description": "The Python micro framework for building web applications.",
+      "language": "Python",
+      "stars": 74926,
+      "forks": 17180,
+      "archived": false,
+      "license": "BSD-3-Clause",
+      "pushed_at": "2026-10-07T14:02:59Z",
+      "has_issues": true,
+      "latest_release": {
+        "tag": "3.1.3",
+        "published_at": "2026-02-19T05:01:30Z",
+        "url": "https://github.com/pallets/flask/releases/tag/3.1.3",
+        "prerelease": false
+      },
+      "coverage": {
+        "records": 200,
+        "issues": 54,
+        "prs": 146,
+        "oldest_created_at": "2026-02-13T07:54:34Z",
+        "newest_created_at": "2026-10-27T11:33:34Z",
+        "truncated": true,
+        "errors": [],
+        "excluded_records": {},
+        "requested_pages": 2,
+        "successful_pages": 2
+      },
+      "windows": {
+        "30": {
+          "issues": 5,
+          "prs": 1,
+          "closed_issues": 5,
+          "open_issues": 0,
+          "closed_ratio": 1.0,
+          "median_closed_days": 0.0808,
+          "closed_duration_n": 5,
+          "median_open_age_days": null,
+          "oldest_open_days": null,
+          "excluded_durations": {},
+          "monthly": [
+            {
+              "month": "2026-10",
+              "issues": 5,
+              "prs": 1
+            }
+          ],
+          "recent_issues": [
+            {
+              "number": 6175,
+              "title": "[rejected AI] Error handling docs examples use `request.arg` instead of `request.args`",
+              "url": "https://github.com/pallets/flask/issues/6175",
+              "state": "closed",
+              "created_at": "2026-10-27T11:33:34Z",
+              "closed_at": "2026-10-27T13:44:38Z",
+              "comments": 0,
+              "age_days": 1.1198
+            },
+            {
+              "number": 6174,
+              "title": "[rejected AI] `flask run --cert` mishandles mixed-case certificate values",
+              "url": "https://github.com/pallets/flask/issues/6174",
+              "state": "closed",
+              "created_at": "2026-10-26T11:13:29Z",
+              "closed_at": "2026-10-26T13:35:29Z",
+              "comments": 1,
+              "age_days": 2.1338
+            },
+            {
+              "number": 6172,
+              "title": "3.2: update_template_context is missing from the subclass shim",
+              "url": "https://github.com/pallets/flask/issues/6172",
+              "state": "closed",
+              "created_at": "2026-10-18T18:28:31Z",
+              "closed_at": "2026-10-18T19:03:12Z",
+              "comments": 2,
+              "age_days": 9.8317
+            },
+            {
+              "number": 6171,
+              "title": "[rejected AI] `register_blueprint()` silently ignores the host option",
+              "url": "https://github.com/pallets/flask/issues/6171",
+              "state": "closed",
+              "created_at": "2026-10-16T10:17:45Z",
+              "closed_at": "2026-10-16T12:14:05Z",
+              "comments": 2,
+              "age_days": 12.1725
+            },
+            {
+              "number": 6170,
+              "title": "[rejected AI] Document the Flask 3.2 app.query route shortcut",
+              "url": "https://github.com/pallets/flask/issues/6170",
+              "state": "closed",
+              "created_at": "2026-10-15T02:21:07Z",
+              "closed_at": "2026-10-15T03:29:51Z",
+              "comments": 1,
+              "age_days": 13.5035
+            }
+          ]
+        },
+        "90": {
+          "issues": 18,
+          "prs": 34,
+          "closed_issues": 17,
+          "open_issues": 1,
+          "closed_ratio": 0.944444,
+          "median_closed_days": 0.0352,
+          "closed_duration_n": 17,
+          "median_open_age_days": 57.7979,
+          "oldest_open_days": 57.7979,
+          "excluded_durations": {},
+          "monthly": [
+            {
+              "month": "2026-07",
+              "issues": 0,
+              "prs": 4
+            },
+            {
+              "month": "2026-08",
+              "issues": 9,
+              "prs": 18
+            },
+            {
+              "month": "2026-09",
+              "issues": 4,
+              "prs": 11
+            },
+            {
+              "month": "2026-10",
+              "issues": 5,
+              "prs": 1
+            }
+          ],
+          "recent_issues": [
+            {
+              "number": 6175,
+              "title": "[rejected AI] Error handling docs examples use `request.arg` instead of `request.args`",
+              "url": "https://github.com/pallets/flask/issues/6175",
+              "state": "closed",
+              "created_at": "2026-10-27T11:33:34Z",
+              "closed_at": "2026-10-27T13:44:38Z",
+              "comments": 0,
+              "age_days": 1.1198
+            },
+            {
+              "number": 6174,
+              "title": "[rejected AI] `flask run --cert` mishandles mixed-case certificate values",
+              "url": "https://github.com/pallets/flask/issues/6174",
+              "state": "closed",
+              "created_at": "2026-10-26T11:13:29Z",
+              "closed_at": "2026-10-26T13:35:29Z",
+              "comments": 1,
+              "age_days": 2.1338
+            },
+            {
+              "number": 6172,
+              "title": "3.2: update_template_context is missing from the subclass shim",
+              "url": "https://github.com/pallets/flask/issues/6172",
+              "state": "closed",
+              "created_at": "2026-10-18T18:28:31Z",
+              "closed_at": "2026-10-18T19:03:12Z",
+              "comments": 2,
+              "age_days": 9.8317
+            },
+            {
+              "number": 6171,
+              "title": "[rejected AI] `register_blueprint()` silently ignores the host option",
+              "url": "https://github.com/pallets/flask/issues/6171",
+              "state": "closed",
+              "created_at": "2026-10-16T10:17:45Z",
+              "closed_at": "2026-10-16T12:14:05Z",
+              "comments": 2,
+              "age_days": 12.1725
+            },
+            {
+              "number": 6170,
+              "title": "[rejected AI] Document the Flask 3.2 app.query route shortcut",
+              "url": "https://github.com/pallets/flask/issues/6170",
+              "state": "closed",
+              "created_at": "2026-10-15T02:21:07Z",
+              "closed_at": "2026-10-15T03:29:51Z",
+              "comments": 1,
+              "age_days": 13.5035
+            },
+            {
+              "number": 6165,
+              "title": "update docs for `MAX_CONTENT_LENGTH`",
+              "url": "https://github.com/pallets/flask/issues/6165",
+              "state": "closed",
+              "created_at": "2026-09-24T22:41:33Z",
+              "closed_at": "2026-09-24T22:56:18Z",
+              "comments": 3,
+              "age_days": 33.656
+            },
+            {
+              "number": 6163,
+              "title": "spam",
+              "url": "https://github.com/pallets/flask/issues/6163",
+              "state": "closed",
+              "created_at": "2026-09-15T03:47:22Z",
+              "closed_at": "2026-09-15T04:06:57Z",
+              "comments": 1,
+              "age_days": 43.4436
+            },
+            {
+              "number": 6161,
+              "title": "spam",
+              "url": "https://github.com/pallets/flask/issues/6161",
+              "state": "closed",
+              "created_at": "2026-09-12T13:55:12Z",
+              "closed_at": "2026-09-12T13:57:22Z",
+              "comments": 0,
+              "age_days": 46.0215
+            },
+            {
+              "number": 6160,
+              "title": "spam",
+              "url": "https://github.com/pallets/flask/issues/6160",
+              "state": "closed",
+              "created_at": "2026-09-12T13:52:04Z",
+              "closed_at": "2026-09-12T13:56:52Z",
+              "comments": 0,
+              "age_days": 46.0237
+            },
+            {
+              "number": 6146,
+              "title": "Add Cloudflare to Flask Hosting Platforms docs?",
+              "url": "https://github.com/pallets/flask/issues/6146",
+              "state": "open",
+              "created_at": "2026-08-31T19:17:12Z",
+              "closed_at": null,
+              "comments": 3,
+              "age_days": 57.7979
+            }
+          ]
+        },
+        "all": {
+          "issues": 54,
+          "prs": 146,
+          "closed_issues": 53,
+          "open_issues": 1,
+          "closed_ratio": 0.981481,
+          "median_closed_days": 0.0241,
+          "closed_duration_n": 53,
+          "median_open_age_days": 57.7979,
+          "oldest_open_days": 57.7979,
+          "excluded_durations": {},
+          "monthly": [
+            {
+              "month": "2026-02",
+              "issues": 6,
+              "prs": 13
+            },
+            {
+              "month": "2026-03",
+              "issues": 4,
+              "prs": 18
+            },
+            {
+              "month": "2026-04",
+              "issues": 8,
+              "prs": 16
+            },
+            {
+              "month": "2026-05",
+              "issues": 3,
+              "prs": 22
+            },
+            {
+              "month": "2026-06",
+              "issues": 11,
+              "prs": 10
+            },
+            {
+              "month": "2026-07",
+              "issues": 4,
+              "prs": 37
+            },
+            {
+              "month": "2026-08",
+              "issues": 9,
+              "prs": 18
+            },
+            {
+              "month": "2026-09",
+              "issues": 4,
+              "prs": 11
+            },
+            {
+              "month": "2026-10",
+              "issues": 5,
+              "prs": 1
+            }
+          ],
+          "recent_issues": [
+            {
+              "number": 6175,
+              "title": "[rejected AI] Error handling docs examples use `request.arg` instead of `request.args`",
+              "url": "https://github.com/pallets/flask/issues/6175",
+              "state": "closed",
+              "created_at": "2026-10-27T11:33:34Z",
+              "closed_at": "2026-10-27T13:44:38Z",
+              "comments": 0,
+              "age_days": 1.1198
+            },
+            {
+              "number": 6174,
+              "title": "[rejected AI] `flask run --cert` mishandles mixed-case certificate values",
+              "url": "https://github.com/pallets/flask/issues/6174",
+              "state": "closed",
+              "created_at": "2026-10-26T11:13:29Z",
+              "closed_at": "2026-10-26T13:35:29Z",
+              "comments": 1,
+              "age_days": 2.1338
+            },
+            {
+              "number": 6172,
+              "title": "3.2: update_template_context is missing from the subclass shim",
+              "url": "https://github.com/pallets/flask/issues/6172",
+              "state": "closed",
+              "created_at": "2026-10-18T18:28:31Z",
+              "closed_at": "2026-10-18T19:03:12Z",
+              "comments": 2,
+              "age_days": 9.8317
+            },
+            {
+              "number": 6171,
+              "title": "[rejected AI] `register_blueprint()` silently ignores the host option",
+              "url": "https://github.com/pallets/flask/issues/6171",
+              "state": "closed",
+              "created_at": "2026-10-16T10:17:45Z",
+              "closed_at": "2026-10-16T12:14:05Z",
+              "comments": 2,
+              "age_days": 12.1725
+            },
+            {
+              "number": 6170,
+              "title": "[rejected AI] Document the Flask 3.2 app.query route shortcut",
+              "url": "https://github.com/pallets/flask/issues/6170",
+              "state": "closed",
+              "created_at": "2026-10-15T02:21:07Z",
+              "closed_at": "2026-10-15T03:29:51Z",
+              "comments": 1,
+              "age_days": 13.5035
+            },
+            {
+              "number": 6165,
+              "title": "update docs for `MAX_CONTENT_LENGTH`",
+              "url": "https://github.com/pallets/flask/issues/6165",
+              "state": "closed",
+              "created_at": "2026-09-24T22:41:33Z",
+              "closed_at": "2026-09-24T22:56:18Z",
+              "comments": 3,
+              "age_days": 33.656
+            },
+            {
+              "number": 6163,
+              "title": "spam",
+              "url": "https://github.com/pallets/flask/issues/6163",
+              "state": "closed",
+              "created_at": "2026-09-15T03:47:22Z",
+              "closed_at": "2026-09-15T04:06:57Z",
+              "comments": 1,
+              "age_days": 43.4436
+            },
+            {
+              "number": 6161,
+              "title": "spam",
+              "url": "https://github.com/pallets/flask/issues/6161",
+              "state": "closed",
+              "created_at": "2026-09-12T13:55:12Z",
+              "closed_at": "2026-09-12T13:57:22Z",
+              "comments": 0,
+              "age_days": 46.0215
+            },
+            {
+              "number": 6160,
+              "title": "spam",
+              "url": "https://github.com/pallets/flask/issues/6160",
+              "state": "closed",
+              "created_at": "2026-09-12T13:52:04Z",
+              "closed_at": "2026-09-12T13:56:52Z",
+              "comments": 0,
+              "age_days": 46.0237
+            },
+            {
+              "number": 6146,
+              "title": "Add Cloudflare to Flask Hosting Platforms docs?",
+              "url": "https://github.com/pallets/flask/issues/6146",
+              "state": "open",
+              "created_at": "2026-08-31T19:17:12Z",
+              "closed_at": null,
+              "comments": 3,
+              "age_days": 57.7979
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "django/django",
+      "url": "https://github.com/django/django",
+      "description": "The Web framework for perfectionists with deadlines.",
+      "language": "Python",
+      "stars": 91532,
+      "forks": 36521,
+      "archived": false,
+      "license": "BSD-3-Clause",
+      "pushed_at": "2026-10-28T12:53:14Z",
+      "has_issues": false,
+      "latest_release": null,
+      "coverage": {
+        "records": 200,
+        "issues": 0,
+        "prs": 200,
+        "oldest_created_at": "2026-09-20T23:15:56Z",
+        "newest_created_at": "2026-10-27T17:43:52Z",
+        "truncated": true,
+        "errors": [],
+        "excluded_records": {},
+        "requested_pages": 2,
+        "successful_pages": 2
+      },
+      "windows": {
+        "30": {
+          "issues": 0,
+          "prs": 162,
+          "closed_issues": 0,
+          "open_issues": 0,
+          "closed_ratio": null,
+          "median_closed_days": null,
+          "closed_duration_n": 0,
+          "median_open_age_days": null,
+          "oldest_open_days": null,
+          "excluded_durations": {},
+          "monthly": [
+            {
+              "month": "2026-09",
+              "issues": 0,
+              "prs": 11
+            },
+            {
+              "month": "2026-10",
+              "issues": 0,
+              "prs": 151
+            }
+          ],
+          "recent_issues": []
+        },
+        "90": {
+          "issues": 0,
+          "prs": 200,
+          "closed_issues": 0,
+          "open_issues": 0,
+          "closed_ratio": null,
+          "median_closed_days": null,
+          "closed_duration_n": 0,
+          "median_open_age_days": null,
+          "oldest_open_days": null,
+          "excluded_durations": {},
+          "monthly": [
+            {
+              "month": "2026-09",
+              "issues": 0,
+              "prs": 49
+            },
+            {
+              "month": "2026-10",
+              "issues": 0,
+              "prs": 151
+            }
+          ],
+          "recent_issues": []
+        },
+        "all": {
+          "issues": 0,
+          "prs": 200,
+          "closed_issues": 0,
+          "open_issues": 0,
+          "closed_ratio": null,
+          "median_closed_days": null,
+          "closed_duration_n": 0,
+          "median_open_age_days": null,
+          "oldest_open_days": null,
+          "excluded_durations": {},
+          "monthly": [
+            {
+              "month": "2026-09",
+              "issues": 0,
+              "prs": 49
+            },
+            {
+              "month": "2026-10",
+              "issues": 0,
+              "prs": 151
+            }
+          ],
+          "recent_issues": []
+        }
+      }
+    },
+    {
+      "name": "fastapi/fastapi",
+      "url": "https://github.com/fastapi/fastapi",
+      "description": "FastAPI framework, high performance, easy to learn, fast to code, ready for production",
+      "language": "Python",
+      "stars": 104241,
+      "forks": 10137,
+      "archived": false,
+      "license": "MIT",
+      "pushed_at": "2026-10-27T04:56:28Z",
+      "has_issues": true,
+      "latest_release": {
+        "tag": "0.162.0",
+        "published_at": "2026-10-23T18:47:17Z",
+        "url": "https://github.com/fastapi/fastapi/releases/tag/0.162.0",
+        "prerelease": false
+      },
+      "coverage": {
+        "records": 200,
+        "issues": 4,
+        "prs": 196,
+        "oldest_created_at": "2026-09-18T03:46:34Z",
+        "newest_created_at": "2026-10-28T12:16:14Z",
+        "truncated": true,
+        "errors": [],
+        "excluded_records": {},
+        "requested_pages": 2,
+        "successful_pages": 2
+      },
+      "windows": {
+        "30": {
+          "issues": 3,
+          "prs": 175,
+          "closed_issues": 3,
+          "open_issues": 0,
+          "closed_ratio": 1.0,
+          "median_closed_days": 0.1204,
+          "closed_duration_n": 3,
+          "median_open_age_days": null,
+          "oldest_open_days": null,
+          "excluded_durations": {},
+          "monthly": [
+            {
+              "month": "2026-09",
+              "issues": 1,
+              "prs": 14
+            },
+            {
+              "month": "2026-10",
+              "issues": 2,
+              "prs": 161
+            }
+          ],
+          "recent_issues": [
+            {
+              "number": 16601,
+              "title": "500 Internal Server Error instead of 422 when a JSON body has NaN and a float field fails validation",
+              "url": "https://github.com/fastapi/fastapi/issues/16601",
+              "state": "closed",
+              "created_at": "2026-10-22T23:01:52Z",
+              "closed_at": "2026-10-23T04:48:20Z",
+              "comments": 1,
+              "age_days": 5.6419
+            },
+            {
+              "number": 16451,
+              "title": "Docs: note that native OpenTelemetry works on AWS Lambda (Mangum)",
+              "url": "https://github.com/fastapi/fastapi/issues/16451",
+              "state": "closed",
+              "created_at": "2026-10-02T01:40:50Z",
+              "closed_at": "2026-10-02T04:34:15Z",
+              "comments": 0,
+              "age_days": 26.5315
+            },
+            {
+              "number": 16417,
+              "title": "0.142.0: app fails to start when OTEL_EXPORTER_OTLP_ENDPOINT is set but the opentelemetry extra isn't installed",
+              "url": "https://github.com/fastapi/fastapi/issues/16417",
+              "state": "closed",
+              "created_at": "2026-09-30T09:30:02Z",
+              "closed_at": "2026-09-30T09:51:40Z",
+              "comments": 1,
+              "age_days": 28.2056
+            }
+          ]
+        },
+        "90": {
+          "issues": 4,
+          "prs": 196,
+          "closed_issues": 4,
+          "open_issues": 0,
+          "closed_ratio": 1.0,
+          "median_closed_days": 0.1805,
+          "closed_duration_n": 4,
+          "median_open_age_days": null,
+          "oldest_open_days": null,
+          "excluded_durations": {},
+          "monthly": [
+            {
+              "month": "2026-09",
+              "issues": 2,
+              "prs": 35
+            },
+            {
+              "month": "2026-10",
+              "issues": 2,
+              "prs": 161
+            }
+          ],
+          "recent_issues": [
+            {
+              "number": 16601,
+              "title": "500 Internal Server Error instead of 422 when a JSON body has NaN and a float field fails validation",
+              "url": "https://github.com/fastapi/fastapi/issues/16601",
+              "state": "closed",
+              "created_at": "2026-10-22T23:01:52Z",
+              "closed_at": "2026-10-23T04:48:20Z",
+              "comments": 1,
+              "age_days": 5.6419
+            },
+            {
+              "number": 16451,
+              "title": "Docs: note that native OpenTelemetry works on AWS Lambda (Mangum)",
+              "url": "https://github.com/fastapi/fastapi/issues/16451",
+              "state": "closed",
+              "created_at": "2026-10-02T01:40:50Z",
+              "closed_at": "2026-10-02T04:34:15Z",
+              "comments": 0,
+              "age_days": 26.5315
+            },
+            {
+              "number": 16417,
+              "title": "0.142.0: app fails to start when OTEL_EXPORTER_OTLP_ENDPOINT is set but the opentelemetry extra isn't installed",
+              "url": "https://github.com/fastapi/fastapi/issues/16417",
+              "state": "closed",
+              "created_at": "2026-09-30T09:30:02Z",
+              "closed_at": "2026-09-30T09:51:40Z",
+              "comments": 1,
+              "age_days": 28.2056
+            },
+            {
+              "number": 16390,
+              "title": "_endpoint_context_cache keyed by id(func) can return stale context after GC",
+              "url": "https://github.com/fastapi/fastapi/issues/16390",
+              "state": "closed",
+              "created_at": "2026-09-22T23:43:27Z",
+              "closed_at": "2026-09-23T05:54:20Z",
+              "comments": 0,
+              "age_days": 35.613
+            }
+          ]
+        },
+        "all": {
+          "issues": 4,
+          "prs": 196,
+          "closed_issues": 4,
+          "open_issues": 0,
+          "closed_ratio": 1.0,
+          "median_closed_days": 0.1805,
+          "closed_duration_n": 4,
+          "median_open_age_days": null,
+          "oldest_open_days": null,
+          "excluded_durations": {},
+          "monthly": [
+            {
+              "month": "2026-09",
+              "issues": 2,
+              "prs": 35
+            },
+            {
+              "month": "2026-10",
+              "issues": 2,
+              "prs": 161
+            }
+          ],
+          "recent_issues": [
+            {
+              "number": 16601,
+              "title": "500 Internal Server Error instead of 422 when a JSON body has NaN and a float field fails validation",
+              "url": "https://github.com/fastapi/fastapi/issues/16601",
+              "state": "closed",
+              "created_at": "2026-10-22T23:01:52Z",
+              "closed_at": "2026-10-23T04:48:20Z",
+              "comments": 1,
+              "age_days": 5.6419
+            },
+            {
+              "number": 16451,
+              "title": "Docs: note that native OpenTelemetry works on AWS Lambda (Mangum)",
+              "url": "https://github.com/fastapi/fastapi/issues/16451",
+              "state": "closed",
+              "created_at": "2026-10-02T01:40:50Z",
+              "closed_at": "2026-10-02T04:34:15Z",
+              "comments": 0,
+              "age_days": 26.5315
+            },
+            {
+              "number": 16417,
+              "title": "0.142.0: app fails to start when OTEL_EXPORTER_OTLP_ENDPOINT is set but the opentelemetry extra isn't installed",
+              "url": "https://github.com/fastapi/fastapi/issues/16417",
+              "state": "closed",
+              "created_at": "2026-09-30T09:30:02Z",
+              "closed_at": "2026-09-30T09:51:40Z",
+              "comments": 1,
+              "age_days": 28.2056
+            },
+            {
+              "number": 16390,
+              "title": "_endpoint_context_cache keyed by id(func) can return stale context after GC",
+              "url": "https://github.com/fastapi/fastapi/issues/16390",
+              "state": "closed",
+              "created_at": "2026-09-22T23:43:27Z",
+              "closed_at": "2026-09-23T05:54:20Z",
+              "comments": 0,
+              "age_days": 35.613
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "encode/starlette",
+      "url": "https://github.com/Kludex/starlette",
+      "description": "The little ASGI framework that shines. 🌟",
+      "language": "Python",
+      "stars": 12689,
+      "forks": 1416,
+      "archived": false,
+      "license": "BSD-3-Clause",
+      "pushed_at": "2026-10-24T17:17:21Z",
+      "has_issues": true,
+      "latest_release": {
+        "tag": "1.10.0",
+        "published_at": "2026-10-24T15:02:54Z",
+        "url": "https://github.com/Kludex/starlette/releases/tag/1.10.0",
+        "prerelease": false
+      },
+      "coverage": {
+        "records": 200,
+        "issues": 13,
+        "prs": 187,
+        "oldest_created_at": "2026-09-05T10:53:32Z",
+        "newest_created_at": "2026-10-28T14:12:06Z",
+        "truncated": true,
+        "errors": [],
+        "excluded_records": {},
+        "requested_pages": 2,
+        "successful_pages": 2
+      },
+      "windows": {
+        "30": {
+          "issues": 9,
+          "prs": 125,
+          "closed_issues": 7,
+          "open_issues": 2,
+          "closed_ratio": 0.777778,
+          "median_closed_days": 2.9979,
+          "closed_duration_n": 7,
+          "median_open_age_days": 8.616,
+          "oldest_open_days": 8.6229,
+          "excluded_durations": {},
+          "monthly": [
+            {
+              "month": "2026-09",
+              "issues": 0,
+              "prs": 8
+            },
+            {
+              "month": "2026-10",
+              "issues": 9,
+              "prs": 117
+            }
+          ],
+          "recent_issues": [
+            {
+              "number": 3709,
+              "title": "Create a suggested-features.txt",
+              "url": "https://github.com/Kludex/starlette/issues/3709",
+              "state": "closed",
+              "created_at": "2026-10-22T13:59:09Z",
+              "closed_at": "2026-10-22T14:01:18Z",
+              "comments": 1,
+              "age_days": 6.0187
+            },
+            {
+              "number": 3689,
+              "title": "WSGI build_environ incorrectly strips PATH_INFO when root_path is a prefix but not a boundary",
+              "url": "https://github.com/Kludex/starlette/issues/3689",
+              "state": "closed",
+              "created_at": "2026-10-20T00:56:15Z",
+              "closed_at": "2026-10-23T12:17:49Z",
+              "comments": 1,
+              "age_days": 8.5624
+            },
+            {
+              "number": 3688,
+              "title": "URL(scope=scope) crashes on non-UTF-8 query strings",
+              "url": "https://github.com/Kludex/starlette/issues/3688",
+              "state": "closed",
+              "created_at": "2026-10-20T00:06:24Z",
+              "closed_at": "2026-10-20T00:12:13Z",
+              "comments": 0,
+              "age_days": 8.597
+            },
+            {
+              "number": 3687,
+              "title": "Config._read_file incorrectly strips inner quotes from quoted values",
+              "url": "https://github.com/Kludex/starlette/issues/3687",
+              "state": "closed",
+              "created_at": "2026-10-20T00:03:36Z",
+              "closed_at": "2026-10-23T12:34:19Z",
+              "comments": 0,
+              "age_days": 8.599
+            },
+            {
+              "number": 3686,
+              "title": "Mount.url_path_for produces %2F when path argument starts with /",
+              "url": "https://github.com/Kludex/starlette/issues/3686",
+              "state": "open",
+              "created_at": "2026-10-19T23:48:52Z",
+              "closed_at": null,
+              "comments": 0,
+              "age_days": 8.6092
+            },
+            {
+              "number": 3684,
+              "title": "URL.replace() produces invalid netloc when hostname contains a port",
+              "url": "https://github.com/Kludex/starlette/issues/3684",
+              "state": "open",
+              "created_at": "2026-10-19T23:29:11Z",
+              "closed_at": null,
+              "comments": 0,
+              "age_days": 8.6229
+            },
+            {
+              "number": 3683,
+              "title": "FloatConvertor.to_string produces misleading error messages for NaN and -inf",
+              "url": "https://github.com/Kludex/starlette/issues/3683",
+              "state": "closed",
+              "created_at": "2026-10-19T22:22:31Z",
+              "closed_at": "2026-10-22T22:19:27Z",
+              "comments": 0,
+              "age_days": 8.6692
+            },
+            {
+              "number": 3645,
+              "title": "SessionMiddleware omits Max-Age=0 in Set-Cookie header when max_age=0 is configured",
+              "url": "https://github.com/Kludex/starlette/issues/3645",
+              "state": "closed",
+              "created_at": "2026-10-08T12:59:40Z",
+              "closed_at": "2026-10-09T14:25:05Z",
+              "comments": 0,
+              "age_days": 20.06
+            },
+            {
+              "number": 3630,
+              "title": "GZipMiddleware delays http.response.start even when it cannot compress",
+              "url": "https://github.com/Kludex/starlette/issues/3630",
+              "state": "closed",
+              "created_at": "2026-10-05T18:44:42Z",
+              "closed_at": "2026-10-13T07:45:02Z",
+              "comments": 2,
+              "age_days": 22.8204
+            }
+          ]
+        },
+        "90": {
+          "issues": 13,
+          "prs": 187,
+          "closed_issues": 10,
+          "open_issues": 3,
+          "closed_ratio": 0.769231,
+          "median_closed_days": 2.0286,
+          "closed_duration_n": 10,
+          "median_open_age_days": 8.6229,
+          "oldest_open_days": 49.9274,
+          "excluded_durations": {},
+          "monthly": [
+            {
+              "month": "2026-09",
+              "issues": 4,
+              "prs": 70
+            },
+            {
+              "month": "2026-10",
+              "issues": 9,
+              "prs": 117
+            }
+          ],
+          "recent_issues": [
+            {
+              "number": 3709,
+              "title": "Create a suggested-features.txt",
+              "url": "https://github.com/Kludex/starlette/issues/3709",
+              "state": "closed",
+              "created_at": "2026-10-22T13:59:09Z",
+              "closed_at": "2026-10-22T14:01:18Z",
+              "comments": 1,
+              "age_days": 6.0187
+            },
+            {
+              "number": 3689,
+              "title": "WSGI build_environ incorrectly strips PATH_INFO when root_path is a prefix but not a boundary",
+              "url": "https://github.com/Kludex/starlette/issues/3689",
+              "state": "closed",
+              "created_at": "2026-10-20T00:56:15Z",
+              "closed_at": "2026-10-23T12:17:49Z",
+              "comments": 1,
+              "age_days": 8.5624
+            },
+            {
+              "number": 3688,
+              "title": "URL(scope=scope) crashes on non-UTF-8 query strings",
+              "url": "https://github.com/Kludex/starlette/issues/3688",
+              "state": "closed",
+              "created_at": "2026-10-20T00:06:24Z",
+              "closed_at": "2026-10-20T00:12:13Z",
+              "comments": 0,
+              "age_days": 8.597
+            },
+            {
+              "number": 3687,
+              "title": "Config._read_file incorrectly strips inner quotes from quoted values",
+              "url": "https://github.com/Kludex/starlette/issues/3687",
+              "state": "closed",
+              "created_at": "2026-10-20T00:03:36Z",
+              "closed_at": "2026-10-23T12:34:19Z",
+              "comments": 0,
+              "age_days": 8.599
+            },
+            {
+              "number": 3686,
+              "title": "Mount.url_path_for produces %2F when path argument starts with /",
+              "url": "https://github.com/Kludex/starlette/issues/3686",
+              "state": "open",
+              "created_at": "2026-10-19T23:48:52Z",
+              "closed_at": null,
+              "comments": 0,
+              "age_days": 8.6092
+            },
+            {
+              "number": 3684,
+              "title": "URL.replace() produces invalid netloc when hostname contains a port",
+              "url": "https://github.com/Kludex/starlette/issues/3684",
+              "state": "open",
+              "created_at": "2026-10-19T23:29:11Z",
+              "closed_at": null,
+              "comments": 0,
+              "age_days": 8.6229
+            },
+            {
+              "number": 3683,
+              "title": "FloatConvertor.to_string produces misleading error messages for NaN and -inf",
+              "url": "https://github.com/Kludex/starlette/issues/3683",
+              "state": "closed",
+              "created_at": "2026-10-19T22:22:31Z",
+              "closed_at": "2026-10-22T22:19:27Z",
+              "comments": 0,
+              "age_days": 8.6692
+            },
+            {
+              "number": 3645,
+              "title": "SessionMiddleware omits Max-Age=0 in Set-Cookie header when max_age=0 is configured",
+              "url": "https://github.com/Kludex/starlette/issues/3645",
+              "state": "closed",
+              "created_at": "2026-10-08T12:59:40Z",
+              "closed_at": "2026-10-09T14:25:05Z",
+              "comments": 0,
+              "age_days": 20.06
+            },
+            {
+              "number": 3630,
+              "title": "GZipMiddleware delays http.response.start even when it cannot compress",
+              "url": "https://github.com/Kludex/starlette/issues/3630",
+              "state": "closed",
+              "created_at": "2026-10-05T18:44:42Z",
+              "closed_at": "2026-10-13T07:45:02Z",
+              "comments": 2,
+              "age_days": 22.8204
+            },
+            {
+              "number": 3579,
+              "title": "Request.url turns a // path into an authority when the scope has no host",
+              "url": "https://github.com/Kludex/starlette/issues/3579",
+              "state": "closed",
+              "created_at": "2026-09-24T05:11:57Z",
+              "closed_at": "2026-10-17T09:51:30Z",
+              "comments": 2,
+              "age_days": 34.3848
+            }
+          ]
+        },
+        "all": {
+          "issues": 13,
+          "prs": 187,
+          "closed_issues": 10,
+          "open_issues": 3,
+          "closed_ratio": 0.769231,
+          "median_closed_days": 2.0286,
+          "closed_duration_n": 10,
+          "median_open_age_days": 8.6229,
+          "oldest_open_days": 49.9274,
+          "excluded_durations": {},
+          "monthly": [
+            {
+              "month": "2026-09",
+              "issues": 4,
+              "prs": 70
+            },
+            {
+              "month": "2026-10",
+              "issues": 9,
+              "prs": 117
+            }
+          ],
+          "recent_issues": [
+            {
+              "number": 3709,
+              "title": "Create a suggested-features.txt",
+              "url": "https://github.com/Kludex/starlette/issues/3709",
+              "state": "closed",
+              "created_at": "2026-10-22T13:59:09Z",
+              "closed_at": "2026-10-22T14:01:18Z",
+              "comments": 1,
+              "age_days": 6.0187
+            },
+            {
+              "number": 3689,
+              "title": "WSGI build_environ incorrectly strips PATH_INFO when root_path is a prefix but not a boundary",
+              "url": "https://github.com/Kludex/starlette/issues/3689",
+              "state": "closed",
+              "created_at": "2026-10-20T00:56:15Z",
+              "closed_at": "2026-10-23T12:17:49Z",
+              "comments": 1,
+              "age_days": 8.5624
+            },
+            {
+              "number": 3688,
+              "title": "URL(scope=scope) crashes on non-UTF-8 query strings",
+              "url": "https://github.com/Kludex/starlette/issues/3688",
+              "state": "closed",
+              "created_at": "2026-10-20T00:06:24Z",
+              "closed_at": "2026-10-20T00:12:13Z",
+              "comments": 0,
+              "age_days": 8.597
+            },
+            {
+              "number": 3687,
+              "title": "Config._read_file incorrectly strips inner quotes from quoted values",
+              "url": "https://github.com/Kludex/starlette/issues/3687",
+              "state": "closed",
+              "created_at": "2026-10-20T00:03:36Z",
+              "closed_at": "2026-10-23T12:34:19Z",
+              "comments": 0,
+              "age_days": 8.599
+            },
+            {
+              "number": 3686,
+              "title": "Mount.url_path_for produces %2F when path argument starts with /",
+              "url": "https://github.com/Kludex/starlette/issues/3686",
+              "state": "open",
+              "created_at": "2026-10-19T23:48:52Z",
+              "closed_at": null,
+              "comments": 0,
+              "age_days": 8.6092
+            },
+            {
+              "number": 3684,
+              "title": "URL.replace() produces invalid netloc when hostname contains a port",
+              "url": "https://github.com/Kludex/starlette/issues/3684",
+              "state": "open",
+              "created_at": "2026-10-19T23:29:11Z",
+              "closed_at": null,
+              "comments": 0,
+              "age_days": 8.6229
+            },
+            {
+              "number": 3683,
+              "title": "FloatConvertor.to_string produces misleading error messages for NaN and -inf",
+              "url": "https://github.com/Kludex/starlette/issues/3683",
+              "state": "closed",
+              "created_at": "2026-10-19T22:22:31Z",
+              "closed_at": "2026-10-22T22:19:27Z",
+              "comments": 0,
+              "age_days": 8.6692
+            },
+            {
+              "number": 3645,
+              "title": "SessionMiddleware omits Max-Age=0 in Set-Cookie header when max_age=0 is configured",
+              "url": "https://github.com/Kludex/starlette/issues/3645",
+              "state": "closed",
+              "created_at": "2026-10-08T12:59:40Z",
+              "closed_at": "2026-10-09T14:25:05Z",
+              "comments": 0,
+              "age_days": 20.06
+            },
+            {
+              "number": 3630,
+              "title": "GZipMiddleware delays http.response.start even when it cannot compress",
+              "url": "https://github.com/Kludex/starlette/issues/3630",
+              "state": "closed",
+              "created_at": "2026-10-05T18:44:42Z",
+              "closed_at": "2026-10-13T07:45:02Z",
+              "comments": 2,
+              "age_days": 22.8204
+            },
+            {
+              "number": 3579,
+              "title": "Request.url turns a // path into an authority when the scope has no host",
+              "url": "https://github.com/Kludex/starlette/issues/3579",
+              "state": "closed",
+              "created_at": "2026-09-24T05:11:57Z",
+              "closed_at": "2026-10-17T09:51:30Z",
+              "comments": 2,
+              "age_days": 34.3848
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "sanic-org/sanic",
+      "url": "https://github.com/sanic-org/sanic",
+      "description": " Accelerate your web app development  | Build fast. Run fast.",
+      "language": "Python",
+      "stars": 18631,
+      "forks": 1615,
+      "archived": false,
+      "license": "MIT",
+      "pushed_at": "2026-07-29T03:09:51Z",
+      "has_issues": true,
+      "latest_release": {
+        "tag": "v25.12.1",
+        "published_at": "2026-05-31T19:42:26Z",
+        "url": "https://github.com/sanic-org/sanic/releases/tag/v25.12.1",
+        "prerelease": false
+      },
+      "coverage": {
+        "records": 200,
+        "issues": 63,
+        "prs": 137,
+        "oldest_created_at": "2024-10-16T19:13:05Z",
+        "newest_created_at": "2026-10-17T13:41:51Z",
+        "truncated": true,
+        "errors": [],
+        "excluded_records": {},
+        "requested_pages": 2,
+        "successful_pages": 2
+      },
+      "windows": {
+        "30": {
+          "issues": 3,
+          "prs": 9,
+          "closed_issues": 0,
+          "open_issues": 3,
+          "closed_ratio": 0.0,
+          "median_closed_days": null,
+          "closed_duration_n": 0,
+          "median_open_age_days": 24.2323,
+          "oldest_open_days": 28.346,
+          "excluded_durations": {},
+          "monthly": [
+            {
+              "month": "2026-09",
+              "issues": 1,
+              "prs": 1
+            },
+            {
+              "month": "2026-10",
+              "issues": 2,
+              "prs": 8
+            }
+          ],
+          "recent_issues": [
+            {
+              "number": 3205,
+              "title": "Redoc v3 fails to render without type=\"module\" on the script tag",
+              "url": "https://github.com/sanic-org/sanic/issues/3205",
+              "state": "open",
+              "created_at": "2026-10-16T14:56:18Z",
+              "closed_at": null,
+              "comments": 0,
+              "age_days": 11.9791
+            },
+            {
+              "number": 3200,
+              "title": "Main process never exits when a worker's after_server_start fails after the worker acknowledged startup (__TERMINATE_EARLY__ is treated as a restart request)",
+              "url": "https://github.com/sanic-org/sanic/issues/3200",
+              "state": "open",
+              "created_at": "2026-10-04T08:51:37Z",
+              "closed_at": null,
+              "comments": 0,
+              "age_days": 24.2323
+            },
+            {
+              "number": 3196,
+              "title": "Main process never exits and spins a CPU when SIGTERM arrives while workers are still starting (wait_for_ack ignores the shutdown message)",
+              "url": "https://github.com/sanic-org/sanic/issues/3196",
+              "state": "open",
+              "created_at": "2026-09-30T06:07:52Z",
+              "closed_at": null,
+              "comments": 0,
+              "age_days": 28.346
+            }
+          ]
+        },
+        "90": {
+          "issues": 4,
+          "prs": 20,
+          "closed_issues": 0,
+          "open_issues": 4,
+          "closed_ratio": 0.0,
+          "median_closed_days": null,
+          "closed_duration_n": 0,
+          "median_open_age_days": 26.2892,
+          "oldest_open_days": 39.9495,
+          "excluded_durations": {},
+          "monthly": [
+            {
+              "month": "2026-07",
+              "issues": 0,
+              "prs": 1
+            },
+            {
+              "month": "2026-08",
+              "issues": 0,
+              "prs": 4
+            },
+            {
+              "month": "2026-09",
+              "issues": 2,
+              "prs": 7
+            },
+            {
+              "month": "2026-10",
+              "issues": 2,
+              "prs": 8
+            }
+          ],
+          "recent_issues": [
+            {
+              "number": 3205,
+              "title": "Redoc v3 fails to render without type=\"module\" on the script tag",
+              "url": "https://github.com/sanic-org/sanic/issues/3205",
+              "state": "open",
+              "created_at": "2026-10-16T14:56:18Z",
+              "closed_at": null,
+              "comments": 0,
+              "age_days": 11.9791
+            },
+            {
+              "number": 3200,
+              "title": "Main process never exits when a worker's after_server_start fails after the worker acknowledged startup (__TERMINATE_EARLY__ is treated as a restart request)",
+              "url": "https://github.com/sanic-org/sanic/issues/3200",
+              "state": "open",
+              "created_at": "2026-10-04T08:51:37Z",
+              "closed_at": null,
+              "comments": 0,
+              "age_days": 24.2323
+            },
+            {
+              "number": 3196,
+              "title": "Main process never exits and spins a CPU when SIGTERM arrives while workers are still starting (wait_for_ack ignores the shutdown message)",
+              "url": "https://github.com/sanic-org/sanic/issues/3196",
+              "state": "open",
+              "created_at": "2026-09-30T06:07:52Z",
+              "closed_at": null,
+              "comments": 0,
+              "age_days": 28.346
+            },
+            {
+              "number": 3192,
+              "title": "Request.form and Request.get_form() declare return type that includes None yet cannot return None",
+              "url": "https://github.com/sanic-org/sanic/issues/3192",
+              "state": "open",
+              "created_at": "2026-09-18T15:38:50Z",
+              "closed_at": null,
+              "comments": 3,
+              "age_days": 39.9495
+            }
+          ]
+        },
+        "all": {
+          "issues": 63,
+          "prs": 137,
+          "closed_issues": 38,
+          "open_issues": 25,
+          "closed_ratio": 0.603175,
+          "median_closed_days": 29.6624,
+          "closed_duration_n": 38,
+          "median_open_age_days": 285.6284,
+          "oldest_open_days": 706.4462,
+          "excluded_durations": {},
+          "monthly": [
+            {
+              "month": "2024-10",
+              "issues": 4,
+              "prs": 2
+            },
+            {
+              "month": "2024-11",
+              "issues": 3,
+              "prs": 1
+            },
+            {
+              "month": "2024-12",
+              "issues": 3,
+              "prs": 8
+            },
+            {
+              "month": "2025-01",
+              "issues": 4,
+              "prs": 5
+            },
+            {
+              "month": "2025-02",
+              "issues": 5,
+              "prs": 3
+            },
+            {
+              "month": "2025-03",
+              "issues": 3,
+              "prs": 8
+            },
+            {
+              "month": "2025-04",
+              "issues": 5,
+              "prs": 4
+            },
+            {
+              "month": "2025-05",
+              "issues": 1,
+              "prs": 5
+            },
+            {
+              "month": "2025-06",
+              "issues": 4,
+              "prs": 4
+            },
+            {
+              "month": "2025-07",
+              "issues": 2,
+              "prs": 3
+            },
+            {
+              "month": "2025-08",
+              "issues": 1,
+              "prs": 0
+            },
+            {
+              "month": "2025-09",
+              "issues": 1,
+              "prs": 2
+            },
+            {
+              "month": "2025-10",
+              "issues": 1,
+              "prs": 2
+            },
+            {
+              "month": "2025-11",
+              "issues": 2,
+              "prs": 6
+            },
+            {
+              "month": "2025-12",
+              "issues": 4,
+              "prs": 26
+            },
+            {
+              "month": "2026-01",
+              "issues": 7,
+              "prs": 2
+            },
+            {
+              "month": "2026-02",
+              "issues": 2,
+              "prs": 8
+            },
+            {
+              "month": "2026-03",
+              "issues": 0,
+              "prs": 3
+            },
+            {
+              "month": "2026-04",
+              "issues": 0,
+              "prs": 9
+            },
+            {
+              "month": "2026-05",
+              "issues": 2,
+              "prs": 6
+            },
+            {
+              "month": "2026-06",
+              "issues": 1,
+              "prs": 1
+            },
+            {
+              "month": "2026-07",
+              "issues": 4,
+              "prs": 10
+            },
+            {
+              "month": "2026-08",
+              "issues": 0,
+              "prs": 4
+            },
+            {
+              "month": "2026-09",
+              "issues": 2,
+              "prs": 7
+            },
+            {
+              "month": "2026-10",
+              "issues": 2,
+              "prs": 8
+            }
+          ],
+          "recent_issues": [
+            {
+              "number": 3205,
+              "title": "Redoc v3 fails to render without type=\"module\" on the script tag",
+              "url": "https://github.com/sanic-org/sanic/issues/3205",
+              "state": "open",
+              "created_at": "2026-10-16T14:56:18Z",
+              "closed_at": null,
+              "comments": 0,
+              "age_days": 11.9791
+            },
+            {
+              "number": 3200,
+              "title": "Main process never exits when a worker's after_server_start fails after the worker acknowledged startup (__TERMINATE_EARLY__ is treated as a restart request)",
+              "url": "https://github.com/sanic-org/sanic/issues/3200",
+              "state": "open",
+              "created_at": "2026-10-04T08:51:37Z",
+              "closed_at": null,
+              "comments": 0,
+              "age_days": 24.2323
+            },
+            {
+              "number": 3196,
+              "title": "Main process never exits and spins a CPU when SIGTERM arrives while workers are still starting (wait_for_ack ignores the shutdown message)",
+              "url": "https://github.com/sanic-org/sanic/issues/3196",
+              "state": "open",
+              "created_at": "2026-09-30T06:07:52Z",
+              "closed_at": null,
+              "comments": 0,
+              "age_days": 28.346
+            },
+            {
+              "number": 3192,
+              "title": "Request.form and Request.get_form() declare return type that includes None yet cannot return None",
+              "url": "https://github.com/sanic-org/sanic/issues/3192",
+              "state": "open",
+              "created_at": "2026-09-18T15:38:50Z",
+              "closed_at": null,
+              "comments": 3,
+              "age_days": 39.9495
+            },
+            {
+              "number": 3179,
+              "title": "[Bug] Secondary apps lack built-in HTTP signals (NotFound error) when receiving requests in spawn / dev mode",
+              "url": "https://github.com/sanic-org/sanic/issues/3179",
+              "state": "open",
+              "created_at": "2026-07-29T03:54:29Z",
+              "closed_at": null,
+              "comments": 6,
+              "age_days": 91.4386
+            },
+            {
+              "number": 3176,
+              "title": "Incorrect Parameter name in Signals Documentation",
+              "url": "https://github.com/sanic-org/sanic/issues/3176",
+              "state": "open",
+              "created_at": "2026-07-23T21:28:19Z",
+              "closed_at": null,
+              "comments": 1,
+              "age_days": 96.7068
+            },
+            {
+              "number": 3175,
+              "title": "Task was destroyed but it is pending! for WebsocketImplProtocol.async_data_received on abrupt client disconnect",
+              "url": "https://github.com/sanic-org/sanic/issues/3175",
+              "state": "open",
+              "created_at": "2026-07-22T09:15:02Z",
+              "closed_at": null,
+              "comments": 2,
+              "age_days": 98.216
+            },
+            {
+              "number": 3172,
+              "title": "AttributeError: module 'tracerite.html' has no attribute 'style'",
+              "url": "https://github.com/sanic-org/sanic/issues/3172",
+              "state": "closed",
+              "created_at": "2026-07-19T15:04:28Z",
+              "closed_at": "2026-07-19T18:16:35Z",
+              "comments": 3,
+              "age_days": 100.9734
+            },
+            {
+              "number": 3168,
+              "title": "SuperCompress: Free open-source LLM prompt compression - cut token costs ~65%",
+              "url": "https://github.com/sanic-org/sanic/issues/3168",
+              "state": "closed",
+              "created_at": "2026-06-30T02:48:59Z",
+              "closed_at": "2026-06-30T04:17:17Z",
+              "comments": 0,
+              "age_days": 120.4841
+            },
+            {
+              "number": 3163,
+              "title": "Make header size limit configurable above 16k",
+              "url": "https://github.com/sanic-org/sanic/issues/3163",
+              "state": "closed",
+              "created_at": "2026-05-27T08:20:13Z",
+              "closed_at": "2026-05-31T19:36:38Z",
+              "comments": 2,
+              "age_days": 154.2541
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "totals": {
+    "repositories": 5,
+    "records": 1000,
+    "issues": 134,
+    "prs": 866
+  },
+  "limitations": [
+    "这是按最新创建记录截取的描述性样本，不能当作仓库全部历史、全部积压或随机样本。不同仓库覆盖的日期不同。",
+    "30 天和 90 天筛选仅作用于已采集记录；当样本最早日期晚于窗口起点时，该窗口覆盖不完整。",
+    "关闭比例是样本 Issue 的当前关闭状态比例。关闭可能代表重复、拒绝或其他处理，并不等于问题已修复。",
+    "关闭耗时中位数仅统计有有效关闭时间的已关闭 Issue，排除尚未关闭记录，不能代表整体解决速度。",
+    "API 顺序读取期间数据可能变化；创建时间晚于采集起点的记录被排除，当前状态不代表采集起点的历史状态。",
+    "部分项目在其他平台管理问题，或停用 GitHub Issues。零条 Issue 不能解释为零问题或维护更好。",
+    "发布信息取 GitHub releases 列表的首条；无记录不代表没有软件版本发布。仓库推送时间也不等同于代码质量。",
+    "这些观察不能直接用于安全、质量或维护风险排名；项目选择及样本上限会影响结果。"
+  ]
+}

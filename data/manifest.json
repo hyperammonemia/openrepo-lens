@@ -1,0 +1,388 @@
+{
+  "schema_version": 1,
+  "snapshot_start": "2026-10-28T14:26:08Z",
+  "repositories": [
+    "pallets/flask",
+    "django/django",
+    "fastapi/fastapi",
+    "encode/starlette",
+    "sanic-org/sanic"
+  ],
+  "requests": [
+    {
+      "repo": "pallets/flask",
+      "kind": "metadata",
+      "url": "https://api.github.com/repos/pallets/flask",
+      "requested_at": "2026-10-28T14:26:08Z",
+      "headers": {
+        "date": "Wed, 28 Oct 2026 14:26:08 GMT",
+        "x-ratelimit-remaining": "58",
+        "x-ratelimit-reset": "1793201075",
+        "x-github-request-id": "AFB2:2BC407:2BA0056:41FE0D4:6AE20600",
+        "etag": "W/\"23a4dac696e4092eda403d81e595db2235f4e89a4a8aec061049167942b77348\""
+      },
+      "status": 200,
+      "received_at": "2026-10-28T14:26:10Z",
+      "path": "data/raw/20261028T142608961134Z/pallets__flask__metadata.json",
+      "sha256": "acd860ed1a620dae5e2a0111b1916a6aeacf3aaaa3e502957374ca7183349ca9",
+      "bytes": 6175
+    },
+    {
+      "repo": "pallets/flask",
+      "kind": "issues_page_1",
+      "url": "https://api.github.com/repos/pallets/flask/issues?state=all&sort=created&direction=desc&per_page=100&page=1",
+      "requested_at": "2026-10-28T14:26:10Z",
+      "headers": {
+        "date": "Wed, 28 Oct 2026 14:26:09 GMT",
+        "x-ratelimit-remaining": "57",
+        "x-ratelimit-reset": "1793201075",
+        "x-github-request-id": "AFB6:13043:2C5E64A:42BAAC2:6AE20600",
+        "link": "<https://api.github.com/repositories/596892/issues?state=all&sort=created&direction=desc&per_page=100&page=2&after=Y3Vyc29yOnYyOpLPAAABnrO-QjjPAAAAARRN-AY%3D>; rel=\"next\"",
+        "etag": "W/\"9832123ae45b7e805d68ebb9e748191f44c2a4b8f655f533a93dfb35e23e653e\""
+      },
+      "status": 200,
+      "received_at": "2026-10-28T14:26:14Z",
+      "path": "data/raw/20261028T142608961134Z/pallets__flask__issues_page_1.json",
+      "sha256": "ee6d2d79e128b04dfa77478839a4630a67c6f014aff1b48956199f6880e08633",
+      "bytes": 439169
+    },
+    {
+      "repo": "pallets/flask",
+      "kind": "issues_page_2",
+      "url": "https://api.github.com/repos/pallets/flask/issues?state=all&sort=created&direction=desc&per_page=100&page=2",
+      "requested_at": "2026-10-28T14:26:14Z",
+      "headers": {
+        "date": "Wed, 28 Oct 2026 14:26:14 GMT",
+        "x-ratelimit-remaining": "56",
+        "x-ratelimit-reset": "1793201075",
+        "x-github-request-id": "9BE6:2D2155:2C8A0B6:42ED532:6AE20605",
+        "link": "<https://api.github.com/repositories/596892/issues?state=all&sort=created&direction=desc&per_page=100&page=3&after=Y3Vyc29yOnYyOpLPAAABnFX-lpDO6pisvQ%3D%3D>; rel=\"next\", <https://api.github.com/repositories/596892/issues?state=all&sort=created&direction=desc&per_page=100&page=1&before=Y3Vyc29yOnYyOpLPAAABnqqmPZDPAAAAARNN6tY%3D>; rel=\"prev\"",
+        "etag": "W/\"2f2740449237ce0c8360379074681aef93488219acabcf29b701d759811f488d\""
+      },
+      "status": 200,
+      "received_at": "2026-10-28T14:26:17Z",
+      "path": "data/raw/20261028T142608961134Z/pallets__flask__issues_page_2.json",
+      "sha256": "9f021b40f3b839c9cd403ba26b9954c9db62aafc597e59d515ef3d9a9531485e",
+      "bytes": 397800
+    },
+    {
+      "repo": "pallets/flask",
+      "kind": "release",
+      "url": "https://api.github.com/repos/pallets/flask/releases?per_page=1",
+      "requested_at": "2026-10-28T14:26:17Z",
+      "headers": {
+        "date": "Wed, 28 Oct 2026 14:26:17 GMT",
+        "x-ratelimit-remaining": "55",
+        "x-ratelimit-reset": "1793201075",
+        "x-github-request-id": "9BEC:C22E0:2B74D49:41D580D:6AE20608",
+        "link": "<https://api.github.com/repositories/596892/releases?per_page=1&page=2>; rel=\"next\", <https://api.github.com/repositories/596892/releases?per_page=1&page=38>; rel=\"last\"",
+        "etag": "W/\"9267b8c4834881e9d0d267d4f6b61b7e57b0cf6ad5364ff48dbab14f4aa47230\""
+      },
+      "status": 200,
+      "received_at": "2026-10-28T14:26:19Z",
+      "path": "data/raw/20261028T142608961134Z/pallets__flask__release.json",
+      "sha256": "0bbeccedf39795c62024445a5351445085ceefd8b6c27760b796a576c3e02e9c",
+      "bytes": 5875
+    },
+    {
+      "repo": "django/django",
+      "kind": "metadata",
+      "url": "https://api.github.com/repos/django/django",
+      "requested_at": "2026-10-28T14:26:19Z",
+      "headers": {
+        "date": "Wed, 28 Oct 2026 14:26:18 GMT",
+        "x-ratelimit-remaining": "54",
+        "x-ratelimit-reset": "1793201075",
+        "x-github-request-id": "9BFC:29DFC2:2BDCE9D:42380E2:6AE20609",
+        "etag": "W/\"a15b6a2d2370d69fcff80ce04568fdb273ee0653b22f9006ace7558468a8e4f7\""
+      },
+      "status": 200,
+      "received_at": "2026-10-28T14:26:20Z",
+      "path": "data/raw/20261028T142608961134Z/django__django__metadata.json",
+      "sha256": "8436c4d484dac221d510b1d91c102ccbd9e9b957f4aa6fc79b7de871b94370de",
+      "bytes": 6125
+    },
+    {
+      "repo": "django/django",
+      "kind": "issues_page_1",
+      "url": "https://api.github.com/repos/django/django/issues?state=all&sort=created&direction=desc&per_page=100&page=1",
+      "requested_at": "2026-10-28T14:26:20Z",
+      "headers": {
+        "date": "Wed, 28 Oct 2026 14:26:20 GMT",
+        "x-ratelimit-remaining": "53",
+        "x-ratelimit-reset": "1793201075",
+        "x-github-request-id": "9BFE:180847:2BD44BE:423104A:6AE2060B",
+        "link": "<https://api.github.com/repositories/4164482/issues?state=all&sort=created&direction=desc&per_page=100&page=2&after=Y3Vyc29yOnYyOpLPAAABoRrKukDPAAAAAVdFS2w%3D>; rel=\"next\"",
+        "etag": "W/\"706639664ece784c11dfb4af35c208e1c4a79b067cbf1b49a7113e75181f86bb\""
+      },
+      "status": 200,
+      "received_at": "2026-10-28T14:26:24Z",
+      "path": "data/raw/20261028T142608961134Z/django__django__issues_page_1.json",
+      "sha256": "749d1a394e04ac192ab27bad8035593207b42be86bffe6d15c0de4525a00417d",
+      "bytes": 523951
+    },
+    {
+      "repo": "django/django",
+      "kind": "issues_page_2",
+      "url": "https://api.github.com/repos/django/django/issues?state=all&sort=created&direction=desc&per_page=100&page=2",
+      "requested_at": "2026-10-28T14:26:24Z",
+      "headers": {
+        "date": "Wed, 28 Oct 2026 14:26:24 GMT",
+        "x-ratelimit-remaining": "52",
+        "x-ratelimit-reset": "1793201075",
+        "x-github-request-id": "AB06:B666F:2BA9EE2:4209AC2:6AE2060E",
+        "link": "<https://api.github.com/repositories/4164482/issues?state=all&sort=created&direction=desc&per_page=100&page=3&after=Y3Vyc29yOnYyOpLPAAABoMEa0-DPAAAAAUkVG_M%3D>; rel=\"next\", <https://api.github.com/repositories/4164482/issues?state=all&sort=created&direction=desc&per_page=100&page=1&before=Y3Vyc29yOnYyOpLPAAABoRq4ZtjPAAAAAVdBWhE%3D>; rel=\"prev\"",
+        "etag": "W/\"b918776cb93f1bbff9cf7f34a2f8a8ceb1f587ff764a4fc8fb49954f6abb6fbd\""
+      },
+      "status": 200,
+      "received_at": "2026-10-28T14:26:27Z",
+      "path": "data/raw/20261028T142608961134Z/django__django__issues_page_2.json",
+      "sha256": "dbce4d405d69a3fe0bbdbaf2db5582940d8c8e310d426064e510cfa4c3f05a6c",
+      "bytes": 558357
+    },
+    {
+      "repo": "django/django",
+      "kind": "release",
+      "url": "https://api.github.com/repos/django/django/releases?per_page=1",
+      "requested_at": "2026-10-28T14:26:27Z",
+      "headers": {
+        "date": "Wed, 28 Oct 2026 14:26:27 GMT",
+        "x-ratelimit-remaining": "51",
+        "x-ratelimit-reset": "1793201075",
+        "x-github-request-id": "AB14:2BC407:2BA2991:4201E54:6AE20612",
+        "etag": "\"74d1db57f0fec3481bb6b4d9bcdc020d656635ec6c53ee589d27a8831cbbe280\""
+      },
+      "status": 200,
+      "received_at": "2026-10-28T14:26:28Z",
+      "path": "data/raw/20261028T142608961134Z/django__django__release.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2
+    },
+    {
+      "repo": "fastapi/fastapi",
+      "kind": "metadata",
+      "url": "https://api.github.com/repos/fastapi/fastapi",
+      "requested_at": "2026-10-28T14:26:28Z",
+      "headers": {
+        "date": "Wed, 28 Oct 2026 14:26:27 GMT",
+        "x-ratelimit-remaining": "50",
+        "x-ratelimit-reset": "1793201075",
+        "x-github-request-id": "AB22:317330:2BDF470:424013C:6AE20613",
+        "etag": "W/\"8b77e821c876e4768cd99cd63b4cf39e2228c620e389535505ed804ff2a3f9ee\""
+      },
+      "status": 200,
+      "received_at": "2026-10-28T14:26:29Z",
+      "path": "data/raw/20261028T142608961134Z/fastapi__fastapi__metadata.json",
+      "sha256": "b8f0bb25bb2cfcaeb64c5cca79511e33f67201906a47d42e5739c1d817fffe23",
+      "bytes": 6319
+    },
+    {
+      "repo": "fastapi/fastapi",
+      "kind": "issues_page_1",
+      "url": "https://api.github.com/repos/fastapi/fastapi/issues?state=all&sort=created&direction=desc&per_page=100&page=1",
+      "requested_at": "2026-10-28T14:26:29Z",
+      "headers": {
+        "date": "Wed, 28 Oct 2026 14:26:29 GMT",
+        "x-ratelimit-remaining": "49",
+        "x-ratelimit-reset": "1793201075",
+        "x-github-request-id": "AB30:74D14:2B6AFF3:41C9D5D:6AE20614",
+        "link": "<https://api.github.com/repositories/160919119/issues?state=all&sort=created&direction=desc&per_page=100&page=2&after=Y3Vyc29yOnYyOpLPAAABoT38AUDPAAAAAV1Qsos%3D>; rel=\"next\"",
+        "etag": "W/\"15c41066276c1581721ba4b5f6f59ee5944d821860c533fc3da0a2ae1d477ee8\""
+      },
+      "status": 200,
+      "received_at": "2026-10-28T14:26:32Z",
+      "path": "data/raw/20261028T142608961134Z/fastapi__fastapi__issues_page_1.json",
+      "sha256": "d560af39fbf483abf4264831881ed48c7700205e003ad7e6b2b266b75d34fea8",
+      "bytes": 512647
+    },
+    {
+      "repo": "fastapi/fastapi",
+      "kind": "issues_page_2",
+      "url": "https://api.github.com/repos/fastapi/fastapi/issues?state=all&sort=created&direction=desc&per_page=100&page=2",
+      "requested_at": "2026-10-28T14:26:32Z",
+      "headers": {
+        "date": "Wed, 28 Oct 2026 14:26:31 GMT",
+        "x-ratelimit-remaining": "48",
+        "x-ratelimit-reset": "1793201075",
+        "x-github-request-id": "AB40:CE57C:2AE60C3:4144310:6AE20616",
+        "link": "<https://api.github.com/repositories/160919119/issues?state=all&sort=created&direction=desc&per_page=100&page=3&after=Y3Vyc29yOnYyOpLPAAABoLKfhZDPAAAAAUeNNzg%3D>; rel=\"next\", <https://api.github.com/repositories/160919119/issues?state=all&sort=created&direction=desc&per_page=100&page=1&before=Y3Vyc29yOnYyOpLPAAABoT37-XDPAAAAAV1QsN4%3D>; rel=\"prev\"",
+        "etag": "W/\"5b382120a08244e1ade454b04be9104eb533cb6f2f05c2d4dc78383b459c5b9f\""
+      },
+      "status": 200,
+      "received_at": "2026-10-28T14:26:35Z",
+      "path": "data/raw/20261028T142608961134Z/fastapi__fastapi__issues_page_2.json",
+      "sha256": "5875eebbf7fbd250efea69ef42ce0f461827bcbccb3b44760c2b49a4e6c666d5",
+      "bytes": 759464
+    },
+    {
+      "repo": "fastapi/fastapi",
+      "kind": "release",
+      "url": "https://api.github.com/repos/fastapi/fastapi/releases?per_page=1",
+      "requested_at": "2026-10-28T14:26:35Z",
+      "headers": {
+        "date": "Wed, 28 Oct 2026 14:26:36 GMT",
+        "x-ratelimit-remaining": "47",
+        "x-ratelimit-reset": "1793201075",
+        "x-github-request-id": "D5D6:36681:2C30E15:428D258:6AE2061A",
+        "link": "<https://api.github.com/repositories/160919119/releases?per_page=1&page=2>; rel=\"next\", <https://api.github.com/repositories/160919119/releases?per_page=1&page=342>; rel=\"last\"",
+        "etag": "W/\"143a1a6aac7fe383aca3b9f640efa4c8476425dee46a00521ad6ad93615c1eda\""
+      },
+      "status": 200,
+      "received_at": "2026-10-28T14:26:38Z",
+      "path": "data/raw/20261028T142608961134Z/fastapi__fastapi__release.json",
+      "sha256": "eb425e66c57950efbb70b264a35162c38be2ea6f7071b102d8a62134e3a3c2fc",
+      "bytes": 3034
+    },
+    {
+      "repo": "encode/starlette",
+      "kind": "metadata",
+      "url": "https://api.github.com/repos/encode/starlette",
+      "requested_at": "2026-10-28T14:26:38Z",
+      "headers": {
+        "date": "Wed, 28 Oct 2026 14:26:38 GMT",
+        "x-ratelimit-remaining": "45",
+        "x-ratelimit-reset": "1793201075",
+        "x-github-request-id": "D5E2:2D2155:2C8DBEF:42F2927:6AE2061D",
+        "etag": "W/\"d3a1c004cf9093893dc6e2463df2789777a2674a0a35ee77890633cb9bb6ba9a\""
+      },
+      "status": 200,
+      "received_at": "2026-10-28T14:26:40Z",
+      "path": "data/raw/20261028T142608961134Z/encode__starlette__metadata.json",
+      "sha256": "13fc7fff2249a1dbeb574b33a1e7434647e3c9bdb259c581cce050da1248f415",
+      "bytes": 5229
+    },
+    {
+      "repo": "encode/starlette",
+      "kind": "issues_page_1",
+      "url": "https://api.github.com/repos/encode/starlette/issues?state=all&sort=created&direction=desc&per_page=100&page=1",
+      "requested_at": "2026-10-28T14:26:40Z",
+      "headers": {
+        "date": "Wed, 28 Oct 2026 14:26:42 GMT",
+        "x-ratelimit-remaining": "43",
+        "x-ratelimit-reset": "1793201075",
+        "x-github-request-id": "D5EC:28C709:2BB81FA:421D00E:6AE20620",
+        "link": "<https://api.github.com/repositories/138597372/issues?state=all&sort=created&direction=desc&per_page=100&page=2&after=Y3Vyc29yOnYyOpLPAAABoQ1h7WDPAAAAAVTG4kI%3D>; rel=\"next\"",
+        "etag": "W/\"4e88e72590108bc168e0f0cfea95454d95bf9076998cf6ffb8bcb77033b28b57\""
+      },
+      "status": 200,
+      "received_at": "2026-10-28T14:27:00Z",
+      "path": "data/raw/20261028T142608961134Z/encode__starlette__issues_page_1.json",
+      "sha256": "384d7eb7b2777cb93d307825af95234c76b7de835c2e5619bbde9c99b789825e",
+      "bytes": 506156
+    },
+    {
+      "repo": "encode/starlette",
+      "kind": "issues_page_2",
+      "url": "https://api.github.com/repos/encode/starlette/issues?state=all&sort=created&direction=desc&per_page=100&page=2",
+      "requested_at": "2026-10-28T14:27:00Z",
+      "headers": {
+        "date": "Wed, 28 Oct 2026 14:27:02 GMT",
+        "x-ratelimit-remaining": "41",
+        "x-ratelimit-reset": "1793201075",
+        "x-github-request-id": "E4D8:FF7F1:2C3475B:42987CB:6AE20635",
+        "link": "<https://api.github.com/repositories/138597372/issues?state=all&sort=created&direction=desc&per_page=100&page=3&after=Y3Vyc29yOnYyOpLPAAABoHEzv-DPAAAAAT9T0NU%3D>; rel=\"next\", <https://api.github.com/repositories/138597372/issues?state=all&sort=created&direction=desc&per_page=100&page=1&before=Y3Vyc29yOnYyOpLPAAABoQ1h5ZDPAAAAAVTG4M8%3D>; rel=\"prev\"",
+        "etag": "W/\"ba4b2133d9c7547327bfcec718929b03b3c6f0e69e7b5226cc5ce4b696254466\""
+      },
+      "status": 200,
+      "received_at": "2026-10-28T14:27:16Z",
+      "path": "data/raw/20261028T142608961134Z/encode__starlette__issues_page_2.json",
+      "sha256": "ed4100692e3aa53bc1aa296da14166649a1d607fd6bdd176ad7d9efb2bddf172",
+      "bytes": 599063
+    },
+    {
+      "repo": "encode/starlette",
+      "kind": "release",
+      "url": "https://api.github.com/repos/encode/starlette/releases?per_page=1",
+      "requested_at": "2026-10-28T14:27:16Z",
+      "headers": {
+        "date": "Wed, 28 Oct 2026 14:27:16 GMT",
+        "x-ratelimit-remaining": "39",
+        "x-ratelimit-reset": "1793201075",
+        "x-github-request-id": "9F04:B5A75:2B2185D:41802A5:6AE20643",
+        "link": "<https://api.github.com/repositories/138597372/releases?per_page=1&page=2>; rel=\"next\", <https://api.github.com/repositories/138597372/releases?per_page=1&page=103>; rel=\"last\"",
+        "etag": "W/\"f4480466724c02e3c4fd9043dac2109e23ea74e4b7e6163490a7c2b6dd5303ab\""
+      },
+      "status": 200,
+      "received_at": "2026-10-28T14:27:17Z",
+      "path": "data/raw/20261028T142608961134Z/encode__starlette__release.json",
+      "sha256": "ff2f4b9a7790e4804edb906354ef2378a2aadd908879c8c86faae31ccd6be05d",
+      "bytes": 5955
+    },
+    {
+      "repo": "sanic-org/sanic",
+      "kind": "metadata",
+      "url": "https://api.github.com/repos/sanic-org/sanic",
+      "requested_at": "2026-10-28T14:27:17Z",
+      "headers": {
+        "date": "Wed, 28 Oct 2026 14:27:17 GMT",
+        "x-ratelimit-remaining": "38",
+        "x-ratelimit-reset": "1793201075",
+        "x-github-request-id": "9F08:12BC09:2C62B1B:42C2514:6AE20644",
+        "etag": "W/\"123e10949f339bc997587c666a69f9a4f925b7a294154b65035418299d10391f\""
+      },
+      "status": 200,
+      "received_at": "2026-10-28T14:27:19Z",
+      "path": "data/raw/20261028T142608961134Z/sanic-org__sanic__metadata.json",
+      "sha256": "fad5a19e338a5fa0376b75980cfd22c7308b34af1d8d7036122f64f5e1367c4a",
+      "bytes": 6253
+    },
+    {
+      "repo": "sanic-org/sanic",
+      "kind": "issues_page_1",
+      "url": "https://api.github.com/repos/sanic-org/sanic/issues?state=all&sort=created&direction=desc&per_page=100&page=1",
+      "requested_at": "2026-10-28T14:27:19Z",
+      "headers": {
+        "date": "Wed, 28 Oct 2026 14:27:18 GMT",
+        "x-ratelimit-remaining": "37",
+        "x-ratelimit-reset": "1793201075",
+        "x-github-request-id": "9F0E:3D104:2C0ABCB:4270EB1:6AE20645",
+        "link": "<https://api.github.com/repositories/59720190/issues?state=all&sort=created&direction=desc&per_page=100&page=2&after=Y3Vyc29yOnYyOpLPAAABm2GeDnjO4GqQlQ%3D%3D>; rel=\"next\"",
+        "etag": "W/\"73e50f11364a18977fb74b44aabcb5f418752ae044c6e936ed886284f9939ad4\""
+      },
+      "status": 200,
+      "received_at": "2026-10-28T14:27:28Z",
+      "path": "data/raw/20261028T142608961134Z/sanic-org__sanic__issues_page_1.json",
+      "sha256": "737b44d5572967fd21b74243fd4648207cba16c5cc0ee74a7edd089a4fae79f5",
+      "bytes": 433230
+    },
+    {
+      "repo": "sanic-org/sanic",
+      "kind": "issues_page_2",
+      "url": "https://api.github.com/repos/sanic-org/sanic/issues?state=all&sort=created&direction=desc&per_page=100&page=2",
+      "requested_at": "2026-10-28T14:27:28Z",
+      "headers": {
+        "date": "Wed, 28 Oct 2026 14:27:27 GMT",
+        "x-ratelimit-remaining": "36",
+        "x-ratelimit-reset": "1793201075",
+        "x-github-request-id": "CCE8:180847:2BDD10F:423DE98:6AE2064E",
+        "link": "<https://api.github.com/repositories/59720190/issues?state=all&sort=created&direction=desc&per_page=100&page=3&after=Y3Vyc29yOnYyOpLPAAABkpa_fejOmotVcg%3D%3D>; rel=\"next\", <https://api.github.com/repositories/59720190/issues?state=all&sort=created&direction=desc&per_page=100&page=1&before=Y3Vyc29yOnYyOpLPAAABm2GdxEDO4GqP1Q%3D%3D>; rel=\"prev\"",
+        "etag": "W/\"9f04d75298f037f966983f8f9edfa9985bb29e65dda58008fc846fc0bc974b71\""
+      },
+      "status": 200,
+      "received_at": "2026-10-28T14:27:34Z",
+      "path": "data/raw/20261028T142608961134Z/sanic-org__sanic__issues_page_2.json",
+      "sha256": "943db30557bac1cae844a9898ad0a9e3e08a648be03ca28e985f2e801fdff318",
+      "bytes": 463774
+    },
+    {
+      "repo": "sanic-org/sanic",
+      "kind": "release",
+      "url": "https://api.github.com/repos/sanic-org/sanic/releases?per_page=1",
+      "requested_at": "2026-10-28T14:27:34Z",
+      "headers": {
+        "date": "Wed, 28 Oct 2026 14:27:33 GMT",
+        "x-ratelimit-remaining": "35",
+        "x-ratelimit-reset": "1793201075",
+        "x-github-request-id": "DA56:2D2155:2C95C8D:42FE1C8:6AE20655",
+        "link": "<https://api.github.com/repositories/59720190/releases?per_page=1&page=2>; rel=\"next\", <https://api.github.com/repositories/59720190/releases?per_page=1&page=75>; rel=\"last\"",
+        "etag": "W/\"28d4ea4ace428644b803e701dd03a2a251412dfb034f5af4fb4787af8c8fb25f\""
+      },
+      "status": 200,
+      "received_at": "2026-10-28T14:27:35Z",
+      "path": "data/raw/20261028T142608961134Z/sanic-org__sanic__release.json",
+      "sha256": "3fe47b2af9184a60979714050aaf7c0ab15490e3a3d284d233814a88d78c6a8c",
+      "bytes": 2148
+    }
+  ],
+  "collection_finished_at": "2026-10-28T14:27:35Z"
+}

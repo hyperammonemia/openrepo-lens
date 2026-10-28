@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="基于 GitHub 公开数据的开源项目维护状态分析工作台。离线浏览，保留采样边界与数据来源。">
+  <title>OpenRepo Lens · 开源项目维护观察</title>
+  <style>/*__STYLE__*/</style>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主内容</a>
+  <aside class="sidebar">
+    <a class="brand" href="#overview" aria-label="OpenRepo Lens 首页"><span class="brand-mark" aria-hidden="true">◒</span><span>OpenRepo<span class="brand-sub">LENS / 开源观察</span></span></a>
+    <div class="sidebar-label">工作空间</div>
+    <nav aria-label="主导航"><a class="nav-link active" href="#overview"><span aria-hidden="true">▦</span> 数据概览</a><a class="nav-link" href="#repositories"><span aria-hidden="true">≋</span> 仓库对照</a><a class="nav-link" href="#detail"><span aria-hidden="true">⌕</span> 样本明细</a><a class="nav-link" href="#methodology"><span aria-hidden="true">◎</span> 方法与来源</a></nav>
+    <div class="sidebar-note"><span class="status-dot"></span>公开数据 · 离线快照<p>关注维护信号<br>保留每一步的证据</p><span class="sidebar-version">PORTFOLIO PROJECT / 01</span></div>
+  </aside>
+  <main id="main">
+    <header class="topbar"><span>研究工作台 <span class="breadcrumb">/ Python Web 框架</span></span><span class="offline-badge"><span class="status-dot"></span> 本地可复现</span></header>
+    <section id="overview" class="hero"><div><div class="eyebrow">OPEN SOURCE OBSERVATORY</div><h1>开源项目维护观察</h1><p class="hero-description">从公开 Issue 与 Pull Request 样本，观察项目维护状态。</p></div><button id="export-button" type="button" class="button export-button"><span aria-hidden="true">↓</span> 导出当前数据</button></section>
+    <div class="snapshot-line"><span id="snapshot-date">读取快照…</span><span id="snapshot-total"></span></div>
+    <div class="scope-note"><span class="scope-symbol" aria-hidden="true">i</span><span>每个仓库最多采集最新 200 条 Issue / PR 混合记录；时间筛选按创建日期。下列指标描述采集样本。</span><a href="#methodology">查看统计口径</a></div>
+    <section class="filters" aria-label="分析筛选"><div class="field search-field"><label for="repo-search">查找仓库</label><input id="repo-search" type="search" placeholder="搜索名称或描述…" autocomplete="off"></div><div class="field"><label for="window-select">创建时间范围</label><select id="window-select"><option value="30">最近 30 天</option><option value="90" selected>最近 90 天</option><option value="all">全部采集样本</option></select></div><div class="field"><label for="sort-select">排列依据</label><select id="sort-select"><option value="issues">Issue 样本数</option><option value="closed_ratio">样本已关闭占比</option><option value="median_open_age_days">未关闭年龄中位数</option><option value="name">仓库名称</option></select></div><button id="reset-button" type="button" class="text-button">重置筛选</button></section>
+    <div id="result-announcement" class="sr-only" aria-live="polite"></div>
+    <section id="summary" class="stats" aria-label="当前样本摘要"></section>
+    <section id="repositories" class="panel comparison-panel"><div class="section-heading"><div><div class="eyebrow">REPOSITORY COMPARISON</div><h2>样本构成对照</h2><p>点击仓库查看明细。每行长度按当前窗口内的采集记录数计算。</p></div><div class="legend"><span><i class="legend-issue"></i>Issue</span><span><i class="legend-pr"></i>Pull Request</span></div></div><div id="comparison" class="comparison"></div></section>
+    <section id="detail" class="detail-grid" aria-label="所选仓库详情"><article class="panel repo-detail"><div class="eyebrow">SELECTED REPOSITORY</div><div id="repo-detail"></div></article><article class="panel timeline-panel"><div class="section-heading"><div><div class="eyebrow">CREATED IN SAMPLE</div><h2>样本创建月份分布</h2><p>仅显示所选仓库与时间窗口内记录。</p></div></div><div id="monthly-chart"></div></article></section>
+    <section class="panel"><div class="section-heading"><div><div class="eyebrow">ISSUE RECORDS</div><h2>最近创建的 Issue 样本</h2><p>最多列出 10 条，点击标题可核验 GitHub 原记录。</p></div><span id="issue-count" class="quiet-tag"></span></div><div id="issue-list"></div></section>
+    <section class="panel" id="coverage"><div class="section-heading"><div><div class="eyebrow">DATA COVERAGE</div><h2>采样覆盖与质量</h2><p>各仓库的采集跨度可能不同；截断的样本不能代表完整时间窗口。</p></div></div><div class="table-wrap"><table><thead><tr><th scope="col">仓库</th><th scope="col">保留记录</th><th scope="col">最早创建日期</th><th scope="col">最新创建日期</th><th scope="col">采集状态</th></tr></thead><tbody id="coverage-body"></tbody></table></div></section>
+    <section id="methodology" class="panel methodology"><div class="section-heading"><div><div class="eyebrow">METHOD & PROVENANCE</div><h2>让每个数字都有口径</h2><p>公开 REST API、保留原始响应、可离线重算。</p></div></div><details open><summary>这些指标如何计算？</summary><div class="method-content"><p>Issue 与 Pull Request 按 API 的 <code>pull_request</code> 字段区分。30 / 90 天窗口从采集起始时刻向前计算，筛选记录的创建时间；状态是实际采集时读到的状态。</p><p>样本已关闭占比 = 当前窗口中已关闭 Issue 数 ÷ Issue 数。已关闭耗时中位数仅统计有效的已关闭 Issue，从创建到最后关闭的天数；它受已关闭样本选择影响，不能等同于整体处理速度或首次响应时间。</p><p>未关闭年龄为采集起始时间与创建时间的差值。关闭并不一定代表问题修复，PR 也不参与 Issue 关闭指标。缺失值显示「—」，不作为零处理。</p></div></details><details><summary>数据来源与采样限制</summary><div class="method-content"><ul id="limitations"></ul><p>方法参考：<a href="https://docs.github.com/en/rest/issues/issues" target="_blank" rel="noopener noreferrer">GitHub Issues REST API</a>、<a href="https://docs.github.com/en/rest/using-the-rest-api/using-pagination-in-the-rest-api" target="_blank" rel="noopener noreferrer">分页说明</a>。</p><p>原始响应与 SHA-256 摘要保存在项目的 <code>data/</code> 目录；快照展示不需要网络。Stars、Forks 和 Release 信息是各自请求时刻的仓库元数据。</p></div></details></section>
+    <footer><span>OpenRepo Lens</span><span>真实公开数据 · 明示样本边界 · 可复现分析</span><a href="#overview">回到顶部 ↑</a></footer>
+  </main>
+  <script id="analysis-data" type="application/json">/*__DATA__*/</script>
+  <script>/*__SCRIPT__*/</script>
+</body>
+</html>

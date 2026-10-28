@@ -1,0 +1,20 @@
+Built .\tests\buildcheck_5176fe6feefc4a1d828b39dae90fa018\index.html (69,503 bytes, 5 repositories)
+test_build_escapes_script_terminators_and_preserves_marker_text (test_integration.SnapshotIntegrationTests.test_build_escapes_script_terminators_and_preserves_marker_text) ... ok
+test_counts_reconcile_with_distinct_raw_records (test_integration.SnapshotIntegrationTests.test_counts_reconcile_with_distinct_raw_records) ... ok
+test_no_false_complete_window_or_atomic_snapshot_claim (test_integration.SnapshotIntegrationTests.test_no_false_complete_window_or_atomic_snapshot_claim) ... ok
+test_offline_reanalysis_reproduces_exact_json (test_integration.SnapshotIntegrationTests.test_offline_reanalysis_reproduces_exact_json) ... ok
+test_raw_evidence_integrity_and_request_interval (test_integration.SnapshotIntegrationTests.test_raw_evidence_integrity_and_request_interval) ... ok
+test_standalone_dashboard_embeds_exact_analysis (test_integration.SnapshotIntegrationTests.test_standalone_dashboard_embeds_exact_analysis) ... ok
+test_creation_window_includes_boundary_only (test_pipeline.MetricsTests.test_creation_window_includes_boundary_only) ... ok
+test_current_open_age_and_conditional_median (test_pipeline.MetricsTests.test_current_open_age_and_conditional_median) ... ok
+test_dedup_and_future_creation (test_pipeline.MetricsTests.test_dedup_and_future_creation) ... ok
+test_empty_and_pr_only_nulls (test_pipeline.MetricsTests.test_empty_and_pr_only_nulls) ... ok
+test_invalid_closure_is_excluded_from_duration_not_state (test_pipeline.MetricsTests.test_invalid_closure_is_excluded_from_duration_not_state) ... ok
+test_pr_exclusion_from_issue_denominator (test_pipeline.MetricsTests.test_pr_exclusion_from_issue_denominator) ... ok
+test_raw_integrity_failure_returns_no_data (test_pipeline.MetricsTests.test_raw_integrity_failure_returns_no_data) ... ok
+test_timezone_normalization_and_naive_rejected (test_pipeline.MetricsTests.test_timezone_normalization_and_naive_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.143s
+
+OK

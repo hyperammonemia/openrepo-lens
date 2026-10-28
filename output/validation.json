@@ -1,0 +1,55 @@
+{
+  "checked_at": "2026-10-28T14:33:13.698Z",
+  "python_tests": {
+    "passed": 14,
+    "log": "python-tests.txt"
+  },
+  "browser": {
+    "name": "local Chrome, Playwright headless",
+    "version": "133.0.6943.59",
+    "checks": [
+      {
+        "name": "desktop loads five real repositories offline",
+        "passed": true
+      },
+      {
+        "name": "time windows reconcile with analysis JSON",
+        "passed": true
+      },
+      {
+        "name": "search and repository detail selection",
+        "passed": true
+      },
+      {
+        "name": "keyboard selection preserves focus",
+        "passed": true
+      },
+      {
+        "name": "search empty state and reset",
+        "passed": true
+      },
+      {
+        "name": "sort handles null ratios last",
+        "passed": true
+      },
+      {
+        "name": "download matches active filter and metric window",
+        "passed": true
+      },
+      {
+        "name": "mobile layout fits 390px and 320px",
+        "passed": true
+      },
+      {
+        "name": "no runtime errors or external asset requests",
+        "passed": true
+      }
+    ],
+    "page_errors": [],
+    "external_asset_requests": []
+  },
+  "screenshots": [
+    "desktop-preview.png",
+    "mobile-preview.png"
+  ]
+}
