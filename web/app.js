@@ -90,6 +90,43 @@
     list.forEach(repo => { const coverage = repo.coverage || {}, row = node('tr'); row.append(node('td', '', repo.name), node('td', '', number(coverage.records)), node('td', '', date(coverage.oldest_created_at)), node('td', '', date(coverage.newest_created_at))); const cell = node('td'), errors = coverage.errors || []; cell.append(node('span', `coverage-status ${errors.length ? 'coverage-error' : coverage.truncated ? '' : 'coverage-complete'}`, errors.length ? '存在采集提示' : coverage.truncated ? '样本截断' : '已到分页末尾')); if (errors.length) cell.append(node('div', 'coverage-warning', errors.map(error => typeof error === 'string' ? error : JSON.stringify(error)).join('；'))); if (state.window !== 'all' && coverage.truncated && Date.parse(coverage.oldest_created_at) > Date.parse(data.collected_at) - Number(state.window) * 86400000) cell.append(node('div', 'coverage-warning', `${state.window} 天窗口未完整覆盖`)); row.append(cell); tbody.append(row); });
   }
   function render() { const list = filtered(); if (!list.some(repo => repo.name === state.selected)) state.selected = list[0]?.name || null; renderSummary(list); renderComparison(list); renderDetail(list.find(repo => repo.name === state.selected)); renderCoverage(list); }
+  function downloadFile(content, type, filename) {
+    const url = URL.createObjectURL(new Blob([content], { type }));
+    const link = document.createElement('a'); link.href = url; link.download = filename;
+    document.body.append(link); link.click(); link.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 2000);
+  }
+  function csvCell(value) {
+    let text = value == null ? '' : String(value);
+    // Protect text that a spreadsheet may interpret as a formula. Numbers remain numeric.
+    if (typeof value === 'string' && (/^[\s\u0000-\u001f\u007f]*[=+\-@＝＋－＠]/u.test(text) || /^[\t\r\n]/.test(text))) text = "'" + text;
+    return '"' + text.replace(/"/g, '""') + '"';
+  }
+  function summaryCsv(list) {
+    const columns = [
+      ['repository', repo => repo.name], ['repository_url', repo => repo.url],
+      ['description', repo => repo.description], ['creation_window_days', () => state.window],
+      ['search_query', () => state.query], ['sort_by', () => state.sort],
+      ['snapshot_started_at_utc', () => data.collected_at], ['snapshot_finished_at_utc', () => data.collection_finished_at],
+      ['source', () => data.source], ['source_manifest', () => 'data/manifest.json'],
+      ['sampling_scope', () => data.sampling?.description], ['state_reference', () => data.sampling?.state_reference],
+      ['sample_limit_per_repository', () => data.sampling?.max_records_per_repo],
+      ['sample_records_all', repo => repo.coverage?.records],
+      ['sample_oldest_created_at', repo => repo.coverage?.oldest_created_at],
+      ['sample_newest_created_at', repo => repo.coverage?.newest_created_at],
+      ['sample_truncated', repo => repo.coverage?.truncated],
+      ['successful_pages', repo => repo.coverage?.successful_pages], ['requested_pages', repo => repo.coverage?.requested_pages],
+      ['collection_warnings', repo => (repo.coverage?.errors || []).map(item => typeof item === 'string' ? item : JSON.stringify(item)).join('; ')],
+      ['issues_in_window', repo => metrics(repo).issues], ['prs_in_window', repo => metrics(repo).prs],
+      ['open_issues_in_window', repo => metrics(repo).open_issues], ['closed_issues_in_window', repo => metrics(repo).closed_issues],
+      ['closed_ratio', repo => metrics(repo).closed_ratio], ['closed_duration_n', repo => metrics(repo).closed_duration_n],
+      ['median_closed_days', repo => metrics(repo).median_closed_days],
+      ['median_open_age_days', repo => metrics(repo).median_open_age_days], ['oldest_open_days', repo => metrics(repo).oldest_open_days],
+      ['limitations', () => (data.limitations || []).join('; ')]
+    ];
+    const rows = [columns.map(([name]) => name), ...list.map(repo => columns.map(([, value]) => value(repo)))];
+    return '\ufeff' + rows.map(row => row.map(csvCell).join(',')).join('\r\n') + '\r\n';
+  }
   const timeLabel = value => String(value || '').replace('T', ' ').replace(/\.\d+Z$/, 'Z').replace('Z', '');
   $('snapshot-date').textContent = `采集区间（UTC） ${timeLabel(data.collected_at)}${data.collection_finished_at ? ' 至 ' + timeLabel(data.collection_finished_at) : ''}`;
   $('snapshot-total').textContent = `${number(data.totals?.repositories ?? repositories.length)} 个仓库 · ${number(data.totals?.records)} 条去重后记录`;
@@ -98,7 +135,8 @@
   $('window-select').addEventListener('change', event => { state.window = event.target.value; render(); });
   $('sort-select').addEventListener('change', event => { state.sort = event.target.value; render(); });
   $('reset-button').addEventListener('click', () => { Object.assign(state, { window: '90', query: '', sort: 'issues', selected: null }); $('repo-search').value = ''; $('window-select').value = '90'; $('sort-select').value = 'issues'; render(); });
-  $('export-button').addEventListener('click', () => { const payload = { schema_version: data.schema_version, collected_at: data.collected_at, collection_finished_at: data.collection_finished_at, source: data.source, sampling: data.sampling, filter: { creation_window: state.window, search: state.query, sort: state.sort }, repositories: filtered().map(repo => ({ name: repo.name, url: repo.url, has_issues: repo.has_issues, coverage: repo.coverage, metrics: metrics(repo) })), limitations: data.limitations }; const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json;charset=utf-8' }); const url = URL.createObjectURL(blob), link = document.createElement('a'); link.href = url; link.download = `openrepo-lens-${state.window}-${date(data.collected_at)}.json`; document.body.append(link); link.click(); link.remove(); setTimeout(() => URL.revokeObjectURL(url), 2000); $('result-announcement').textContent = '当前筛选数据已导出为 JSON 文件。'; });
+  $('export-button').addEventListener('click', () => { const payload = { schema_version: data.schema_version, collected_at: data.collected_at, collection_finished_at: data.collection_finished_at, source: data.source, sampling: data.sampling, filter: { creation_window: state.window, search: state.query, sort: state.sort }, repositories: filtered().map(repo => ({ name: repo.name, url: repo.url, has_issues: repo.has_issues, coverage: repo.coverage, metrics: metrics(repo) })), limitations: data.limitations }; downloadFile(JSON.stringify(payload, null, 2), 'application/json;charset=utf-8', `openrepo-lens-${state.window}-${date(data.collected_at)}.json`); $('result-announcement').textContent = '当前筛选数据已导出为 JSON 文件。'; });
+  $('export-csv-button').addEventListener('click', () => { const list = filtered(); downloadFile(summaryCsv(list), 'text/csv;charset=utf-8', `openrepo-lens-summary-${state.window}-${date(data.collected_at)}.csv`); $('result-announcement').textContent = `已导出 ${list.length} 个当前筛选仓库的 CSV 摘要，每个仓库一行。`; });
   document.querySelectorAll('.nav-link').forEach(link => link.addEventListener('click', () => { document.querySelectorAll('.nav-link').forEach(item => item.classList.remove('active')); link.classList.add('active'); }));
   render();
 })();

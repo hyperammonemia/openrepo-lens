@@ -32,3 +32,20 @@ jobs:
         run: python -m unittest discover -s tests -v
       - name: Verify the static demo matches the rebuilt output
         run: python -c "from pathlib import Path; assert Path('docs/index.html').read_bytes() == Path('output/index.html').read_bytes()"
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - name: Install browser test dependencies
+        run: npm install --ignore-scripts
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Check offline interactions and downloads
+        run: npm run test:ui

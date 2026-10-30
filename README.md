@@ -1,6 +1,6 @@
 # OpenRepo Lens
 
-用公开 GitHub 数据查看开源仓库的近期 Issue 与 PR 样本。工作台支持时间窗口筛选、仓库比较、记录详情和 JSON 导出，并同时展示样本覆盖范围。
+用公开 GitHub 数据查看开源仓库的近期 Issue 与 PR 样本。工作台支持时间窗口筛选、仓库比较、记录详情，以及 CSV 摘要和 JSON 导出，并同时展示样本覆盖范围。
 
 [在线演示](https://hyperammonemia.github.io/openrepo-lens/) · [源代码](https://github.com/hyperammonemia/openrepo-lens)
 
@@ -11,6 +11,14 @@
 下载仓库后，用浏览器打开 `docs/index.html` 或 `output/index.html`。页面内嵌数据、样式和脚本，可以离线使用，无需安装 Python。页面中的原始 Issue 和仓库链接需要联网访问。
 
 可以先切换 30 天和 90 天，搜索 `fastapi`，再打开 Django 的详情查看没有 Issue 样本时的显示方式。快照分析说明见 [output/report.html](output/report.html)，需要下载后在浏览器中打开。
+
+## 导出当前筛选
+
+“摘要 CSV”按当前搜索、时间窗口和排列顺序导出，每个匹配仓库一行，包含该窗口的指标、采集时间、来源和样本覆盖字段。它是仓库汇总；页面中的最近 10 条 Issue 明细不代表全部已采集记录。没有匹配仓库时，CSV 只包含表头。
+
+CSV 使用 UTF-8 BOM、逗号分隔和 CRLF 行尾，字段中的引号与换行按 [RFC 4180](https://www.rfc-editor.org/rfc/rfc4180) 转义。`creation_window_days` 为 `30`、`90` 或 `all`；`closed_ratio` 为 0 到 1 的比例。缺失指标留空，实际零值写为 `0`。
+
+对以公式符号、前置空白后公式符号或制表换行符开头的文本，CSV 会前置单引号；包括全角公式符号。这会改变 CSV 中的文本，数字字段保持原值。此处理用于降低电子表格将文本解释为公式的风险；[OWASP](https://community.owasp.org/attacks/CSV_Injection) 说明，不同表格软件及重新保存行为可能影响保护。需要保留原始值和缺失值类型时，使用“数据 JSON”。
 
 ## 为什么做这个工具
 
@@ -55,16 +63,16 @@ python make_report.py
 
 ## 验证
 
-随仓库保存的快照通过 14 项 Python 测试和 9 项本地 Chrome 浏览器检查。Python 测试覆盖 PR 排除、时间边界、去重、无效日期、空样本、原始文件校验及离线重算。结果见 [output/validation.json](output/validation.json)。
+随仓库保存的快照通过 14 项 Python 测试和 13 项本地 Chrome 浏览器检查。Python 测试覆盖 PR 排除、时间边界、去重、无效日期、空样本、原始文件校验及离线重算。浏览器检查下载实际 CSV，并用 Python 标准库独立解析，验证筛选范围、转义、公式前缀处理和 JSON 原值保留。结果见 [output/validation.json](output/validation.json)。
 
-GitHub Actions 配置在 Python 3.10 和 3.14 上重建离线输出并运行测试；工作流实际运行状态以仓库 Actions 页面为准。浏览器检查为可选开发步骤：
+GitHub Actions 配置在 Python 3.10 和 3.14 上重建离线输出，并使用 Chromium 运行浏览器检查；工作流实际运行状态以仓库 Actions 页面为准。也可以在本机运行浏览器检查：
 
 ```sh
 npm install --ignore-scripts
 npm run test:ui
 ```
 
-浏览器检查默认使用 Windows 本机 Chrome。其他环境可用 `BROWSER_PATH` 指定 Chrome 或 Chromium 的可执行文件。Playwright 不影响离线演示或 Python 复现。
+浏览器检查优先使用 `BROWSER_PATH` 指定的可执行文件；否则使用 Windows 本机 Chrome，或 Playwright 安装的 Chromium。需要安装测试浏览器时，运行 `npx playwright install chromium`。Playwright 不影响离线演示或 Python 复现。
 
 ## 文件结构
 

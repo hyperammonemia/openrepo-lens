@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-28T14:33:13.698Z",
+  "checked_at": "2026-10-30T04:22:08.347Z",
   "python_tests": {
     "passed": 14,
     "log": "python-tests.txt"
@@ -34,6 +34,22 @@
       },
       {
         "name": "download matches active filter and metric window",
+        "passed": true
+      },
+      {
+        "name": "CSV download follows current repository and time filters with source columns",
+        "passed": true
+      },
+      {
+        "name": "CSV includes all filtered repositories in display order and preserves zero versus missing",
+        "passed": true
+      },
+      {
+        "name": "CSV empty search exports only a valid header",
+        "passed": true
+      },
+      {
+        "name": "CSV quotes text and guards formula prefixes while JSON retains the original values",
         "passed": true
       },
       {
